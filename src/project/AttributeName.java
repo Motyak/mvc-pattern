@@ -1,5 +1,5 @@
 package project;
 
-public enum AttributeName implements mvc.AttributeName {
+enum AttributeName implements mvc.AttributeName {
 	grille;
 }
