@@ -9,11 +9,6 @@ class Grille extends mvc.Attribute {
 	}
 	
 	static class Ent implements mvc.Ent {
-		
-		public Ent(int a, int b)
-		{
-
-		}
 
 		@Override
 		public Ihm toIhm() 
@@ -25,11 +20,6 @@ class Grille extends mvc.Attribute {
 	}
 	
 	static class Ihm implements mvc.Ihm {
-	
-		public Ihm(double a, double b)
-		{
-			
-		}
 		
 		@Override
 		public Ent toEnt() 
