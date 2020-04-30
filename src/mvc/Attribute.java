@@ -13,5 +13,7 @@ public abstract class Attribute {
 	public Ent getEnt() { return this.ent; }
 	public Ihm getIhm() { return this.ihm; }
 	
-	public static interface Name {}
+	public static interface Name {
+		public abstract mvc.Attribute get();
+	}
 }

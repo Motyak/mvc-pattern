@@ -10,5 +10,7 @@ public abstract class UseCase {
 	
 	public abstract void doIt();
 	
-	public static interface Name {}
+	public static interface Name {
+		public abstract mvc.UseCase get(mvc.Controller ctrl);
+	}
 }

@@ -5,10 +5,16 @@ public abstract class Controller {
 	private HashMap<Attribute.Name,Attribute> attributs;
 	private HashMap<UseCase.Name,UseCase> useCases;
 	
-	public Controller()
+	public Controller(mvc.Attribute.Name[] attrs, mvc.UseCase.Name[] ucs)
 	{
 		this.attributs = new HashMap<>();
 		this.useCases = new HashMap<>();
+		
+		for(mvc.Attribute.Name n : attrs)
+			this.addAttribute(n, n.get());
+		
+		for(mvc.UseCase.Name n : ucs)
+			this.addUseCase(n, n.get(this));
 	}
 	
 	public void addAttribute(Attribute.Name name, Attribute attr)
