@@ -1,13 +1,27 @@
 package project;
 
-import static project.AttributeName.*;
-import static project.UseCaseName.*;
+//import static project.AttributeName.*;
+//import static project.UseCaseName.*;
 
-public class Controller extends mvc.Controller {
-	Controller()
-	{
+class Controller extends mvc.Controller {
+	
+//	private static Controller ctrl = null;
+	
+	Controller() {
 		super();
-		this.addAttribute(grille, new Grille(new Grille.Ent(3, 1), new Grille.Ihm(9, 7)));
-		this.addUseCase(jouerCoup, new JouerCoup(this));
+		
+		for(AttributeName n : AttributeName.values())
+			this.addAttribute(n, n.get());
+		
+		for(UseCaseName n : UseCaseName.values())
+			this.addUseCase(n, n.get(this));
 	}
+	
+//	public static Controller get() {
+//		if(ctrl == null) {
+//			Controller ctrl = new Controller();
+//		}
+//			
+//		return Controller.ctrl;
+//	}
 }

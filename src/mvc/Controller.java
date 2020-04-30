@@ -2,8 +2,8 @@ package mvc;
 import java.util.HashMap;
 
 public abstract class Controller {
-	private HashMap<AttributeName,Attribute> attributs;
-	private HashMap<UseCaseName,UseCase> useCases;
+	private HashMap<Attribute.Name,Attribute> attributs;
+	private HashMap<UseCase.Name,UseCase> useCases;
 	
 	public Controller()
 	{
@@ -11,24 +11,18 @@ public abstract class Controller {
 		this.useCases = new HashMap<>();
 	}
 	
-	public Controller(Controller ctrl)
-	{
-		this.attributs = ctrl.attributs;
-		this.useCases = ctrl.useCases;
-	}
-	
-	public void addAttribute(AttributeName name, Attribute attr)
+	public void addAttribute(Attribute.Name name, Attribute attr)
 	{
 		this.attributs.put(name, attr);
 	}
 	
-	public void addUseCase(UseCaseName name, UseCase uc)
+	public void addUseCase(UseCase.Name name, UseCase uc)
 	{
 		this.useCases.put(name, uc);
 	}
 	
-	public Attribute getAttribut(AttributeName name) { return this.attributs.get(name); }
-	public UseCase getUseCase(UseCaseName name) { return this.useCases.get(name); }
+	public Attribute getAttribut(Attribute.Name name) { return this.attributs.get(name); }
+	public UseCase getUseCase(UseCase.Name name) { return this.useCases.get(name); }
 	
 	public void entToIhm()
 	{
@@ -36,7 +30,7 @@ public abstract class Controller {
 			a.ihm = a.ent.toIhm();
 	}
 	
-	public void call(UseCaseName useCaseName)
+	public void call(UseCase.Name useCaseName)
 	{
 		this.useCases.get(useCaseName).doIt();
 	}

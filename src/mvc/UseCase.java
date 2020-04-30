@@ -9,4 +9,6 @@ public abstract class UseCase {
 	}
 	
 	public abstract void doIt();
+	
+	public static interface Name {}
 }
