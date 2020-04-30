@@ -1,17 +1,17 @@
 package mvc;
 
 public abstract class Attribute {
-	protected Ent ent;
-	protected Ihm ihm;
+	protected mvc.Ent ent;
+	protected mvc.Ihm ihm;
 	
-	public Attribute(Ent ent, Ihm ihm)
+	public Attribute(mvc.Ent ent, mvc.Ihm ihm)
 	{
 		this.ent = ent;
 		this.ihm = ihm;
 	}
 	
-	public Ent getEnt() { return this.ent; }
-	public Ihm getIhm() { return this.ihm; }
+	public mvc.Ent getEnt() { return this.ent; }
+	public mvc.Ihm getIhm() { return this.ihm; }
 	
 	public static interface Name {
 		public abstract mvc.Attribute get();

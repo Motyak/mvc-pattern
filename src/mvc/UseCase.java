@@ -1,7 +1,7 @@
 package mvc;
 
 public abstract class UseCase {
-	protected Controller ctrl;
+	protected mvc.Controller ctrl;
 	
 	public UseCase(Controller ctrl)
 	{
