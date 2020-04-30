@@ -11,24 +11,13 @@ public abstract class Controller {
 		this.useCases = new HashMap<>();
 		
 		for(mvc.Attribute.Name n : attrs)
-			this.addAttribute(n, n.get());
+			this.attributs.put(n, n.get());
 		
 		for(mvc.UseCase.Name n : ucs)
-			this.addUseCase(n, n.get(this));
-	}
-	
-	public void addAttribute(Attribute.Name name, Attribute attr)
-	{
-		this.attributs.put(name, attr);
-	}
-	
-	public void addUseCase(UseCase.Name name, UseCase uc)
-	{
-		this.useCases.put(name, uc);
+			this.useCases.put(n, n.get(this));
 	}
 	
 	public Attribute getAttribut(Attribute.Name name) { return this.attributs.get(name); }
-	public UseCase getUseCase(UseCase.Name name) { return this.useCases.get(name); }
 	
 	public void entToIhm()
 	{

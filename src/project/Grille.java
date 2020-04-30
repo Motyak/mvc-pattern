@@ -8,7 +8,7 @@ class Grille extends mvc.Attribute {
 	}
 	
 	static class Ent implements mvc.Ent {
-
+		
 		private Integer a;
 		private Integer b;
 		
@@ -17,7 +17,7 @@ class Grille extends mvc.Attribute {
 			this.a = a;
 			this.b = b;
 		}
-		
+
 		public void test()
 		{
 			System.out.println(this.a);
@@ -26,14 +26,16 @@ class Grille extends mvc.Attribute {
 		}
 		
 		@Override
-		public Ihm toIhm() {
+		public Ihm toIhm() 
+		{
 			return new Ihm(this.a.doubleValue(), this.b.doubleValue());
 		}
 		
 	}
 	
 	static class Ihm implements mvc.Ihm {
-		
+	
+
 		private Double a;
 		private Double b;
 

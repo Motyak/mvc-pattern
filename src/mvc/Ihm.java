@@ -1,5 +1,5 @@
 package mvc;
 
 public interface Ihm {
-	public abstract Ent toEnt();
+	public abstract mvc.Ent toEnt();
 }
