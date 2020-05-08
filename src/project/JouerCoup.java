@@ -14,7 +14,7 @@ public class JouerCoup extends mvc.UseCase {
 	@Override
 	public void doIt() 
 	{
-		Grille attr = (Grille)this.ctrl.getAttribut(grille);
+		Grille attr = (Grille)this.ctrl.getAttribute(grille);
 		Grille.Ent grilleEnt = (Grille.Ent)attr.getEnt();
 		Grille.Ihm grilleIhm = (Grille.Ihm)attr.getIhm();
 		
